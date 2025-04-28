@@ -6,6 +6,7 @@ import {
   View,
   useWindowDimensions,
   ScrollView,
+  Dimensions,
 } from "react-native";
 import Title from "../components/ui/Title";
 import PrimaryButton from "../components/ui/PrimaryButton";
@@ -30,9 +31,13 @@ const GameOverScreen = ({ roundsNumber, userNumber, onRestart }) => {
     borderRadius: imageSize / 2,
   };
 
+  const marginTop = {
+    marginTop: height < 400 ? 8 : 100,
+  };
+
   return (
     <ScrollView style={styles.screen}>
-      <View style={styles.rootContainer}>
+      <View style={[styles.rootContainer, marginTop]}>
         <Title>Game Over!</Title>
         <View style={[styles.ImageContainer, imageStyle]}>
           <Image
