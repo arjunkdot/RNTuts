@@ -2,12 +2,12 @@ import React from "react";
 import { Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const IconButton = ({ onPress, color = "white" }) => {
+const IconButton = ({ onPress, iconName, color = "white" }) => {
   return (
     <Pressable
       onPress={onPress}
       style={({ pressed }) => pressed && styles.pressed}>
-      <Ionicons name="bookmark-outline" size={24} color={color} />
+      <Ionicons name={iconName} size={24} color={color} />
     </Pressable>
   );
 };

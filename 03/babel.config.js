@@ -14,6 +14,7 @@ module.exports = function (api) {
             "@/utils": "./utils",
             "@/styles": "./styles",
             "@/data": "./data",
+            "@/store": "./store",
           },
         },
       ],
